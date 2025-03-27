@@ -34,9 +34,9 @@ while True:
         model = ad.AdalineSGD(eta=0.01, n_iter=100, random_state=1)
         model.fit(X_std, y)
         _trained = True
-        print("✅ Addestramento completato")
         for i, c in enumerate(model.cost_, start=1):
             print(f"Epoca {i}: costo medio = {c:.4f}")
+        print("✅ Addestramento completato")
     elif risposta == '2' and _trained == True:
         if model is None:
             print("⚠️ Il modello non è stato ancora addestrato. \n")
@@ -56,6 +56,9 @@ while True:
             y_pred = model.predict(X_test)
             print("✅ Predizione completata. Ecco i primi 10 risultati:")
             print(y_pred[:10])
+            predictions = model.predict(X_std)
+            accuracy = np.mean(predictions == y)
+            print(f"Accuracy finale: {accuracy*100:.2f}%")
     elif risposta == '3' and _trained == True:
         print("Inserisci i dati del passeggero (Pclass, Age, Sex (1=male, 0=female), Parch, SibSp):")
         valori = input("Separati da virgola: ")
