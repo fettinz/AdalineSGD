@@ -1,7 +1,5 @@
-🛥️AdalineSGD- Simple implementation Adaptive neuron🤖 
+🛥️**AdalineSGD- Simple implementation Adaptive neuron**🤖 
+-----------
+**Dataset:** Kaggle Titanic - _Machine Learning from Disaster_
 
-
-
-Dataset: Kaggle Titanic - Machine Learning from Disaster
-
-pip install -r requirements.txt
+>_pip install -r requirements.txt_
